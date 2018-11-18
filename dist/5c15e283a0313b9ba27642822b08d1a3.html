@@ -1,0 +1,142 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>PoseNet - Camera Feed Demo</title>
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: black;
+    }
+
+    .footer-text {
+        max-width: 600px;
+        text-align: center;
+        margin: auto;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .footer-text, .dg {
+        display: none;
+      }
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head> -->
+
+<!-- <body>
+    <div id="info" style='display:none'>
+    </div>
+    <div id="loading">
+        Loading the model...
+    </div>
+
+    <div id='main' style='display:none'>
+        <video id="video" playsinline style=" -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        display: none;
+        ">
+        </video>
+        <canvas id="output" />
+    </div>
+    <div class="footer">
+        <div class="footer-text">
+            <p>
+                PoseNet runs with either a <strong>single-pose</strong> or <strong>multi-pose</strong> detection algorithm. The single person pose detector is faster and more accurate but requires only one subject present in the image.
+                <br>
+                <br> The <strong>output stride</strong> and <strong>image scale factor</strong> have the largest effects on accuracy/speed. A <i>higher</i> output stride results in lower accuracy but higher speed. A <i>higher</i> image scale factor results in higher accuracy but lower speed.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test build PoseNet locally</title>
+    <link href="/dist/3dd62698139f989bb0cae5876a086894.css" rel="stylesheet">
+    <link href="/dist/2f3aae2fe426346fafe4f505a0e5d7e3.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">iSport</h3>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li><a href="/dist/index.html">Intro</a></li>
+                            <li class="active"><a href="/dist/5c15e283a0313b9ba27642822b08d1a3.html">App</a></li>
+                            <li><a href="#">Info</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="inner cover" style="align-content: center; padding-top: 100px;">
+                <div>
+                    <div class="row">
+                        <div class="col-md-6" style="text-align:center">
+                            <div id="info" style="display:none">
+                            </div>
+                            <div id="judge_and_paint" style="width: 520px; height: 620px; background-color: #25C789;margin:auto;">
+                                <div id="loading">
+                                    Loading the model...
+                                </div>
+                                <div id="main" style="display:none;margin:auto;padding: 10px">
+                                    <video id="video" playsinline="" style=" -moz-transform: scaleX(-1);
+                                                                                        -o-transform: scaleX(-1);
+                                                                                        -webkit-transform: scaleX(-1);
+                                                                                        transform: scaleX(-1);
+                                                                                        display: none;
+                                                                                        ">
+                                    </video>
+                                    <canvas id="output">
+                                    
+                                </canvas></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="text-align:center; height: 620px;">
+                            <div style="width: 520px; height: 620px; background-color: #25C789;margin:auto;padding: 10px">
+                                <img src="/dist/c518551482a0617fed1caca58fbcc59b.jpg" style="margin:auto;" alt="Demo Pic1" id="demo_pic1" width="500" height="600">
+                                <canvas id="input">
+                            </canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <p class="lead">
+                    <a href="#" class="btn btn-lg btn-default">Learn more</a>
+                </p> -->
+            </div>
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>@iSport_Team</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/dist/b4ab4f47d2610ef71ab02a76208b939e.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="/dist/b1e7a8e9436e69c7e5603330867f763c.js"></script>
+<!-- <script src="https://unpkg.com/@tensorflow/tfjs"></script> -->
+<!-- <script src="https://unpkg.com/@tensorflow-models/posenet"></script> -->
+<script src="/dist/f3af94d4e5627102a21703f347e61235.js"></script>
+</body>
+
+</html>
