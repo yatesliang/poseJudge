@@ -2,56 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test build PoseNet locally</title>
-    <link href="/dist/3dd62698139f989bb0cae5876a086894.css" rel="stylesheet">
-    <link href="/dist/2f3aae2fe426346fafe4f505a0e5d7e3.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iSport - see how you move!</title>
+  <link href="/dist/84d0cfe6eda26f7495e37ef7d289094b.css" rel="stylesheet">
+  <link href="/dist/ba77f800ec0dd0f7cba6b69e5a58f165.css" rel="stylesheet">
+  <script src="/dist/27d5686c43b831a717058f05a7399b54.js"></script>
+  <!-- <script src="js/jquery.min.js"></script> -->
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+  <!-- <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script> -->
 </head>
 
 <body>
-<div class="site-wrapper">
+  <div class="site-wrapper">
     <div class="site-wrapper-inner">
-        <div class="cover-container">
-            <!--here's navigation bar-->
-            <div class="masthead clearfix">
-                <div class="inner">
-                    <h3 class="masthead-brand">iSport</h3>
-                    <nav>
-                        <ul class="nav masthead-nav">
-                            <li class="active"><a href="/dist/index.html">Intro</a></li>
-                            <li><a href="/dist/5c15e283a0313b9ba27642822b08d1a3.html">App</a></li>
-                            <li><a href="/dist/28ddbe2b4dc16d836986ad2ab7251898.html">Info</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <!--here's main part-->
-            <div class="inner cover">
-                <h2>爱运动小队&nbsp;🏃‍️</h2>
-                <p>iSport——爱运动小队的两位组员身体微胖，需要加强体育锻炼，他们在网上找到了热门的健身教学视频，于是高兴地利用课余时间做锻炼。然而锻炼的效果并不是特别明显，深究原因，他们发现，原来在跟着视频运动的过程中，自己的动作并不标准。</p>
-                <h2>简单的设想&nbsp;🤔</h2>
-                <p>"最简单的做法就是去健身房，教练会帮助纠正姿势。""不如让电脑告诉你吧。"</p>
-                <p>如今人工智能飞速发展，其能力早已超出我们的想象。利用人工智能识别人体姿势，应该不是一件难事。</p>
-                <h2>站在巨人的肩膀&nbsp;📝</h2>
-                <p>早在十几年前，关于计算机识别人体姿势的论文就开始陆续发表在各大期刊上，识别姿势的算法也不断与日俱进。几年前，剑桥大学的Alex Kendall提出了利用深度学习进行视觉定位的PoseNet网络，精度极高。而时下热门的谷歌TensorFlow框架，又使得人工智能的算法在PC机，甚至移动设备上都能方便地运行。</p>
-                <h2>我们的作品&nbsp;💡</h2>
-                <p>于是我们利用TensorFLow的框架做了这样一个Web应用：用笔电或是手机，打开浏览器访问这个网页，开始跟着视频做运动，但在运动的同时，你也能看到自己当前的动作和标准动作的差距，通过明显的提示，自己就能立即知道有那里不足。</p>
-            </div>
-            <!--here's footer-->
-            <div class="mastfoot">
-                <div class="inner">
-                    <p>@iSport_Team</p>
-                </div>
-            </div>
+      <div class="cover-container">
+        <!--here's navigation bar-->
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">iSport</h3>
+            <nav>
+              <ul class="nav masthead-nav">
+                <li class="active"><a href="/dist/9a59b6b418e27e66dccd4659c5d5d621.html">Intro</a></li>
+                <li><a href="/dist/1e6d444dd270720c9c038d61c0a4d9c4.html">App</a></li>
+                <li><a href="/dist/f0efbeb73b411f146f9d9b47b45cce80.html">Info</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-    </div>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="/dist/b1e7a8e9436e69c7e5603330867f763c.js"></script>
-<script src="/dist/f3af94d4e5627102a21703f347e61235.js"></script>
+        <!--here's main part-->
+        <div class="inner cover">
+          <form class="form-signin">
+            <h3 class="form-signin-heading text-center">欢迎登陆 iSport</h3>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+            <!-- <button class="btn btn-block btn-mybg" onclick="signIn();" type="button">
+              Sign in
+            </button> -->
+            <a class="btn btn-block btn-mybg" href="/dist/9a59b6b418e27e66dccd4659c5d5d621.html" role="button">Sign in</a>
+          </form>
+        </div>
+        <!--here's footer-->
+        <div class="mastfoot">
+          <div class="inner">
+            <p>@iSport_Team</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

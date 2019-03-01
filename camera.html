@@ -1,142 +1,133 @@
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-    <title>PoseNet - Camera Feed Demo</title>
-    <style>
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        color: black;
-    }
-
-    .footer-text {
-        max-width: 600px;
-        text-align: center;
-        margin: auto;
-    }
-
-    @media only screen and (max-width: 600px) {
-      .footer-text, .dg {
-        display: none;
-      }
-    }
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head> -->
-
-<!-- <body>
-    <div id="info" style='display:none'>
-    </div>
-    <div id="loading">
-        Loading the model...
-    </div>
-
-    <div id='main' style='display:none'>
-        <video id="video" playsinline style=" -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        display: none;
-        ">
-        </video>
-        <canvas id="output" />
-    </div>
-    <div class="footer">
-        <div class="footer-text">
-            <p>
-                PoseNet runs with either a <strong>single-pose</strong> or <strong>multi-pose</strong> detection algorithm. The single person pose detector is faster and more accurate but requires only one subject present in the image.
-                <br>
-                <br> The <strong>output stride</strong> and <strong>image scale factor</strong> have the largest effects on accuracy/speed. A <i>higher</i> output stride results in lower accuracy but higher speed. A <i>higher</i> image scale factor results in higher accuracy but lower speed.
-            </p>
-        </div>
-    </div>
-
-</body>
-
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>iSport - see how you move!</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/cover.css" rel="stylesheet" />
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test build PoseNet locally</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/cover.css" rel="stylesheet">
-</head>
-
-<body>
-<div class="site-wrapper">
-    <div class="site-wrapper-inner">
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
         <div class="cover-container">
-            <div class="masthead clearfix">
-                <div class="inner">
-                    <h3 class="masthead-brand">iSport</h3>
-                    <nav>
-                        <ul class="nav masthead-nav">
-                            <li><a href="index.html">Intro</a></li>
-                            <li class="active"><a href="camera.html">App</a></li>
-                            <li><a href="#">Info</a></li>
-                        </ul>
-                    </nav>
-                </div>
+          <!-- Navigator Bar -->
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">iSport</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li><a href="intro.html">Intro</a></li>
+                  <li class="active"><a href="pattern.html">App</a></li>
+                  <li><a href="infomation.html">Info</a></li>
+                </ul>
+              </nav>
             </div>
-            <div class="inner cover" style="align-content: center; padding-top: 100px;">
-                <div>
-                    <div class="row">
-                        <div class="col-md-6" style="text-align:center">
-                            <div id="info" style='display:none'>
-                            </div>
-                            <div id="judge_and_paint" style="width: 520px; height: 620px; background-color: #25C789;margin:auto;">
-                                <div id="loading">
-                                    Loading the model...
-                                </div>
-                                <div id='main' style='display:none;margin:auto;padding: 10px'>
-                                    <video id="video" playsinline style=" -moz-transform: scaleX(-1);
-                                                                                        -o-transform: scaleX(-1);
-                                                                                        -webkit-transform: scaleX(-1);
-                                                                                        transform: scaleX(-1);
-                                                                                        display: none;
-                                                                                        ">
-                                    </video>
-                                    <canvas id="output"/>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6" style="text-align:center; height: 620px;">
-                            <div style="width: 520px; height: 620px; background-color: #25C789;margin:auto;padding: 10px">
-                                <img src="assets/02.jpg" style="margin:auto;" alt="Demo Pic1" id="demo_pic1" width="500" height="600">
-                                <canvas id="input"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
 
-                <!-- <p class="lead">
-                    <a href="#" class="btn btn-lg btn-default">Learn more</a>
-                </p> -->
+          <!-- Main Section -->
+          <div class="inner cover text-justify" style="padding-top:80px">
+            <!-- button bar -->
+            <div class="row" style="padding:10px 0 0 0">
+              <div class="col-md-6">
+                <a class="btn btn-default" href="pattern.html" role="button">
+                  🌟所有动作</a
+                >
+              </div>
+              <div class="col-md-6 text-right">
+                <a
+                  class="btn btn-default"
+                  href="#"
+                  role="button"
+                  onclick="changeImg(2);"
+                  ><span
+                    class="glyphicon glyphicon-menu-left"
+                    aria-hidden="true"
+                  ></span
+                  >上个动作</a
+                >
+                <a
+                  class="btn btn-default"
+                  href="#"
+                  role="button"
+                  onclick="changeImg(1);"
+                  >下个动作<span
+                    class="glyphicon glyphicon-menu-right"
+                    aria-hidden="true"
+                  ></span
+                ></a>
+              </div>
             </div>
-            <div class="mastfoot">
-                <div class="inner">
-                    <p>@iSport_Team</p>
+            <!-- Video -->
+            <div class="row" style="padding:20px 0 0 0">
+              <!-- Left Section -->
+              <div class="col-md-6">
+                <div id="info" style="display:none"></div>
+                <div
+                  id="judge_and_paint"
+                  class="img-rounded"
+                  style="width: 540px; height: 700px; background-color:#CD5555;margin:auto;"
+                >
+                  <div id="loading">
+                    Loading the model...
+                  </div>
+                  <div id="main" style="display:none;margin:auto;padding: 10px">
+                    <video
+                      id="video"
+                      playsinline
+                      style=" -moz-transform: scaleX(-1);-o-transform: scaleX(-1);-webkit-transform: scaleX(-1);transform: scaleX(-1);display: none;"
+                    ></video>
+                    <canvas id="output"></canvas>
+                  </div>
                 </div>
+              </div>
+              <!-- Right Section -->
+              <div class="col-md-6">
+                <div
+                  style="width: 540px; height: 700px; background-color:#25C789;margin:auto;padding: 10px"
+                  id="img_box"
+                  class="img-rounded"
+                >
+                  <img
+                    src="assets/01.jpg"
+                    style="margin:auto;display:inline;"
+                    id="input_image"
+                    width="520"
+                    height="680"
+                  />
+                  <img
+                    src="assets/02.jpg"
+                    style="margin:auto;display:none;"
+                    id="demo_pic1"
+                    width="520"
+                    height="680"
+                  />
+                  <img
+                    src="assets/03.jpg"
+                    style="margin:auto;display:none;"
+                    id="demo_pic1"
+                    width="520"
+                    height="680"
+                  />
+                  <canvas id="input"></canvas>
+                </div>
+              </div>
             </div>
+            <!-- Text Section -->
+            <div class="row" style="padding:20px 0 0px 0">
+              <div class="alert alert-success" role="alert" id="noticeBox">
+                <strong id="notice">模型正在加载中，请做好准备！</strong>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-<script src="js/camera.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<!-- <script src="https://unpkg.com/@tensorflow/tfjs"></script> -->
-<!-- <script src="https://unpkg.com/@tensorflow-models/posenet"></script> -->
-<script src="js/test.js"></script>
-</body>
-
+    <!-- scripts -->
+    <script src="js/camera.js"></script>
+    <script src="js/utilities.js"></script>
+  </body>
 </html>

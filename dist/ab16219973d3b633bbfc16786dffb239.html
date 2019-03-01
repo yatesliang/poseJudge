@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iSport - see how you move!</title>
+    <link href="/dist/84d0cfe6eda26f7495e37ef7d289094b.css" rel="stylesheet">
+    <link href="/dist/ba77f800ec0dd0f7cba6b69e5a58f165.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <!-- Navigator Bar -->
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">iSport</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li><a href="/dist/9a59b6b418e27e66dccd4659c5d5d621.html">Intro</a></li>
+                  <li class="active"><a href="/dist/1e6d444dd270720c9c038d61c0a4d9c4.html">App</a></li>
+                  <li><a href="/dist/f0efbeb73b411f146f9d9b47b45cce80.html">Info</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Main Section -->
+          <div class="inner cover text-justify" style="padding-top:80px">
+            <!-- button bar -->
+            <div class="row" style="padding:10px 0 0 0">
+              <div class="col-md-6">
+                <a class="btn btn-default" href="/dist/1e6d444dd270720c9c038d61c0a4d9c4.html" role="button">
+                  🌟所有动作</a>
+              </div>
+              <div class="col-md-6 text-right">
+                <a class="btn btn-default" href="#" role="button" onclick="changeImg(2);"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>上个动作</a>
+                <a class="btn btn-default" href="#" role="button" onclick="changeImg(1);">下个动作<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+              </div>
+            </div>
+            <!-- Video -->
+            <div class="row" style="padding:20px 0 0 0">
+              <!-- Left Section -->
+              <div class="col-md-6">
+                <div id="info" style="display:none"></div>
+                <div id="judge_and_paint" class="img-rounded" style="width: 540px; height: 700px; background-color:#CD5555;margin:auto;">
+                  <div id="loading">
+                    Loading the model...
+                  </div>
+                  <div id="main" style="display:none;margin:auto;padding: 10px">
+                    <video id="video" playsinline="" style=" -moz-transform: scaleX(-1);-o-transform: scaleX(-1);-webkit-transform: scaleX(-1);transform: scaleX(-1);display: none;"></video>
+                    <canvas id="output"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- Right Section -->
+              <div class="col-md-6">
+                <div style="width: 540px; height: 700px; background-color:#25C789;margin:auto;padding: 10px" id="img_box" class="img-rounded">
+                  <img src="/dist/96720f6993c04cd9efc6dd217d4bd966.jpg" style="margin:auto;display:inline;" id="input_image" width="520" height="680">
+                  <img src="/dist/5dfff758518426d2ba5d5ac8eb7ace49.jpg" style="margin:auto;display:none;" id="demo_pic1" width="520" height="680">
+                  <img src="/dist/5ae102f157e215feb6df88456b73aa33.jpg" style="margin:auto;display:none;" id="demo_pic1" width="520" height="680">
+                  <canvas id="input"></canvas>
+                </div>
+              </div>
+            </div>
+            <!-- Text Section -->
+            <div class="row" style="padding:20px 0 0px 0">
+              <div class="alert alert-success" role="alert" id="noticeBox">
+                <strong id="notice">模型正在加载中，请做好准备！</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="/dist/303918f1cc4d6413e251bce5627d85ec.js"></script>
+    <script src="/dist/27d5686c43b831a717058f05a7399b54.js"></script>
+  </body>
+</html>
